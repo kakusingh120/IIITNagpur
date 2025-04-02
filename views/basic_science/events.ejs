@@ -1,0 +1,66 @@
+<%- include('../partials/head2') %> 
+  <body>
+    <%- include('../partials/nav') %> 
+    <div class="bgin pb-20 w-full min-h-screen bg-white text-[#00457b]">
+      <div class="w-full lg:h-[100px] md:h-[70px] h-[85px]"></div>
+
+      <div class="mainContent w-full">
+        <div
+        class="routes w-full px-6 md:px-20 lg:px-44 flex flex-wrap items-center gap-2 md:gap-4 bg-[#00457b] py-3 md:py-5">
+        <a class="text-xs md:text-sm font-medium hover:text-[#f26e32] uppercase inline-block text-white"
+            href="/">Home <i class="ri-arrow-right-s-line text-md"></i>
+        </a>
+        <a class="text-xs md:text-sm font-medium hover:text-[#f26e32] uppercase inline-block text-white"
+            href="/baisc_science/aboutDepartment">Basic Science<i class="ri-arrow-right-s-line text-md"></i>
+        </a>
+        <a class="text-xs md:text-sm font-medium hover:text-[#f26e32] uppercase inline-block text-white"
+            href="#">Events <i class="ri-arrow-right-s-line text-md"></i>
+        </a>
+    </div>
+  
+        <div class="content px-10 mt-16">
+          <h2 class="text-lg md:text-2xl uppercase font-bold text-[#00457b]">Events</h2>
+          <div class="w-full h-[1px] bg-[#00457b] mt-2"></div>
+
+          <% if (data && data.length > 0) { %>
+            <% 
+              // Group events by year
+              const eventsByYear = {};
+              data.forEach(event => {
+                if (!eventsByYear[event.year]) {
+                  eventsByYear[event.year] = [];
+                }
+                eventsByYear[event.year].push(event);
+              });
+              
+              // Sort years in descending order
+              const sortedYears = Object.keys(eventsByYear).sort((a, b) => b - a);
+            %>
+            
+            <% sortedYears.forEach(year => { %>
+              <div>
+                <h2 class="text-xl mt-5 font-bold"><%= year %>:</h2>
+                <ol class="text-ms mt-5 md:pl-12 text-black list-disc">
+                  <% eventsByYear[year].forEach(event => { %>
+                    <% event.description.forEach(desc => { %>
+                      <li>
+                        <h4 class="text-lg m-2 mt-4 mb-4">
+                          <%= desc %>
+                        </h4>
+                      </li>
+                    <% }); %>
+                  <% }); %>
+                </ol>
+              </div>
+            <% }); %>
+          <% } else { %>
+            <div class="mt-8 text-center">
+              <p class="text-lg text-gray-600">No events found for the department.</p>
+            </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+    <%- include('../partials/footer') %> 
+  </body>
+  <%- include('../partials/tail2') %> 

@@ -1,0 +1,82 @@
+<%- include('../partials/head2') %> 
+  <body>
+    <%- include('../partials/nav') %> 
+    <div class="bgin pb-20 w-full min-h-screen bg-white text-[#00457b]">
+      <div class="w-full lg:h-[100px] md:h-[70px] h-[85px]"></div>
+      <div class="mainContent w-full">
+        <div
+        class="routes w-full md:px-6 px-2 md:px-20 lg:px-44 flex flex-wrap items-center gap-2 md:gamd:p-4 p-[4px] bg-[#00457b] py-3 md:py-5">
+        <a class="text-xs md:text-sm font-medium hover:text-[#f26e32] uppercase inline-block text-white"
+            href="/">Home <i class="ri-arrow-right-s-line text-md"></i>
+        </a>
+        <a class="text-xs md:text-sm font-medium hover:text-[#f26e32] uppercase inline-block text-white"
+            href="/cse/aboutDepartment">Computer Science & Eng... <i class="ri-arrow-right-s-line text-md"></i>
+        </a>
+        <a class="text-xs md:text-sm font-medium hover:text-[#f26e32] uppercase inline-block text-white"
+            href="#">Bos <i class="ri-arrow-right-s-line text-md"></i>
+        </a>
+    </div>
+
+        <div class="content px-10 mt-16 mb-10">
+          <h2 class="text-2xl uppercase font-bold text-[#00457b]">Bos</h2>
+          <div class="w-full h-[1px] bg-[#00457b] mt-2"></div>
+
+    <div class="overflow-x-auto mt-8">
+        <table class="w-full border border-gray-300 lg:text-[1vw] md:text-[1.5vw] text-[2vw]">
+            <thead>
+                <tr class="bg-[#00457b] text-white border-b border-gray-300">
+                    <th class="md:px-6 px-2 py-4 border-r border-gray-300 text-left font-semibold">Sr. No.</th>
+                    <th class="md:px-6 px-2 py-4 border-r border-gray-300 text-left font-semibold">Name</th>
+                    <th class="md:px-6 px-2 py-4 border-r border-gray-300 text-left font-semibold">Position</th>
+                    <th class="md:px-6 px-2 py-4 text-left font-semibold">Designation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% const members = [
+                  { no: 1, name: "Dr Nishat Afshan Ansari", position: "Chairman", designation: "Chairman & HoD, CSE" },
+                  { no: 2, name: "Dr. P. S. Deshpande", position: "Expert Member", designation: "Professor, CSE, VNIT" },
+                  { no: 3, name: "Shri. Gandhar Patwardhan", position: "Expert Member", designation: "Managing Director, S2P EDUTECH" },
+                  { no: 4, name: "Dr. Harsh Gaud", position: "Expert Member", designation: "Head of Department ECE" },
+                  { no: 5, name: "Dr. Ashish Tiwari", position: "Special Invitee", designation: "Assistant Professor, CSE, VNIT" },
+                  { no: 6, name: "Dr. Tausif Diwan", position: "Special Invitee", designation: "Associate Dean, IIITN" },
+                  { no: 7, name: "Dr. Prasad V Joshi", position: "Special Invitee", designation: "Head of Department , BS" },
+                  { no: 8, name: "Dr Pooja Jain", position: "Member", designation: "Assistant Professor" },
+                  { no: 9, name: "Dr Jitendra Tembhurne", position: "Member", designation: "Assistant Professor" },
+                  { no: 10, name: "Dr Milind Penurkar", position: "Member", designation: "Assistant Professor" },
+                  { no: 11, name: "Dr Mayuri Digalwar", position: "Member", designation: "Assistant Professor" },
+                  { no: 12, name: "Dr Richa Makhijani", position: "Member", designation: "Assistant Professor" },
+                  { no: 13, name: "Dr Kaushlendra Sharma", position: "Member", designation: "Assistant Professor" },
+                  { no: 14, name: "Dr Rahul Semwal", position: "Member", designation: "Assistant Professor" },
+                  { no: 15, name: "Dr Khushboo Jain", position: "Member", designation: "Assistant Professor" },
+                  { no: 16, name: "Dr Shishupal Kumar", position: "Member", designation: "Assistant Professor" },
+                  { no: 17, name: "Dr Anil Kumar Kushwah", position: "Member", designation: "Assistant Professor" },
+                  { no: 18, name: "Dr Aishwarya Sagar Anand Ukey", position: "Member", designation: "Assistant Professor" },
+                  { no: 19, name: "Dr Vrinda Yadav", position: "Member", designation: "Assistant Professor" },
+                  { no: 20, name: "Dr Jagdish Chakole", position: "Member", designation: "Assistant Professor" },
+                  { no: 21, name: "Dr Nileshchandra Pikle", position: "Member", designation: "Assistant Professor" },
+                  { no: 22, name: "Dr Amol Bhopale", position: "Member", designation: "Assistant Professor" },
+                  { no: 23, name: "Dr Suvra Jyoti Choudhury", position: "Member", designation: "Assistant Professor" },
+                  { no: 24, name: "Dr Neha Kasture", position: "Member", designation: "Assistant Professor" },
+                  { no: 25, name: "Dr Amit Shewale", position: "Member", designation: "Assistant Professor" },
+                  { no: 26, name: "Dr Snehal Bankatrao Shinde", position: "Member", designation: "Assistant Professor" },
+                  { no: 27, name: "Dr Vasundhara Swapnil Rathod", position: "Member", designation: "Assistant Professor" },
+                  { no: 28, name: "Dr Mangesh Ramaji Kose", position: "Member", designation: "Assistant Professor" },
+                  { no: 29, name: "Dr Swati Hira", position: "Member", designation: "Assistant Professor" },
+                ]; %>
+                <% members.forEach(member => { %>
+                <tr class="border-b border-gray-300">
+                    <td class="md:px-6 px-2 py-4 border-r border-gray-300"><%= member.no %></td>
+                    <td class="md:px-6 px-2 py-4 border-r border-gray-300"><%= member.name %></td>
+                    <td class="md:px-6 px-2 py-4 border-r border-gray-300"><%= member.position %></td>
+                    <td class="md:px-6 px-2 py-4"><%= member.designation %></td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+        </div>
+      </div>
+    </div>
+    <%- include('../partials/footer') %> 
+  </body>
+  <%- include('../partials/tail2') %>

@@ -1,0 +1,260 @@
+@font-face {
+    font-family: "font1";
+    src: url("./fonts/AtlassianSans-latin.woff2");
+  }
+  @font-face {
+    font-family: "font2";
+    src: url("./fonts/AvenirLTStdMedium_0.woff2");
+  }
+  @font-face {
+    font-family: "font3";
+    src: url("./fonts/fontawesome-webfont.woff2");
+  }
+  @font-face {
+    font-family: "font4";
+    src: url("./fonts/o-0bIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjc5a7duw.woff2");
+  }
+  @font-face {
+    font-family: "font5";
+    src: url("./fonts/o-0bIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjc5a_du2ui.woff2");
+  }
+  @font-face {
+    font-family: "font6";
+    src: url("./fonts/poetsenone-regular_0-webfont (1).woff2");
+  }
+  @font-face {
+    font-family: "font6";
+    src: url("./fonts/t5t7IRoeKYORG0WNMgnC3seB1YXqupymfw.woff2");
+  }
+  @font-face {
+    font-family: "font7";
+    src: url("./fonts/u-440qyriQwlOrhSvowK_l5-fCZM.woff2");
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  *::-webkit-scrollbar {
+    width: 0.5em;
+    background-color: transparent !important;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #f26e32;
+    border-radius: 10px;
+  }
+  
+  body,
+  html {
+    width: 100%;
+    height: 100%;
+  }
+  .main{
+    font-family: font6;
+  }
+  .banner{
+    background-color: white;
+    color: #00457b;
+  }
+  .title{
+    color: #00457b;
+  }
+   /* .overlay {
+    -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  } */
+  
+  .dets-box {
+    -webkit-clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%);
+            clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%);
+    transition: all 0.5s ease;
+  }
+  
+  .dets-box.active {
+    -webkit-clip-path: polygon(100% 100%, 100% 0, 0 0, 0 100%);
+            clip-path: polygon(100% 100%, 100% 0, 0 0, 0 100%);
+  }
+  
+  .dets {
+    animation: pulse 2s infinite ease-in-out;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+  }
+  .page2b {
+    width: 100%;
+    background-image: url(../images/index/bg1.png);
+    background: linear-gradient(rgba(255, 255, 255, 0.99), rgba(255, 255, 255, 0)), url(../images/index/bg1.png);
+  }
+  
+  #page4,#page6 {
+    background-image: url("../images/index/bg2.avif");
+    background-color: rgba(240, 241, 241, 0.9215686275);
+    background-blend-mode: color;
+  }
+  
+  footer h2:hover, footer i:hover {
+    color: #f26e32;
+    transition: all ease-in-out 0.5s;
+  }
+  
+  .marquee {
+    animation: marquee 10s linear infinite;
+  }
+  
+  .marquee2 {
+    animation: marquee2 10s linear infinite;
+  }
+  
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes marquee2 {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+    z-index: auto !important;
+  }
+  
+  .main {
+    filter: drop-shadow(5px 5px 60px);
+  }
+  
+  .accordion-content {
+    overflow: hidden;
+    height: 0;
+    display: none;
+  }
+  
+  .overlay2 {
+    -webkit-clip-path: circle(0% at 100% 0);
+            clip-path: circle(0% at 100% 0);
+  }
+  
+  .overlay2::-webkit-scrollbar {
+    display: none;
+  }/*# sourceMappingURL=style.css.map */
+  
+  .tab-btn.active {
+    color: #f97316; /* Orange color */
+  }
+  .content-div {
+    display: none;
+  }
+  .content-div.active {
+    display: block;
+  }
+  
+  .lang {
+    clip-path: polygon(0 75%, 100% 75%, 100% 100%, 0% 100%);
+    transition: clip-path 0.4s ease-in-out;
+  }
+  
+  .ann1::after{
+    content: "";
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 1px;
+    height: 100%;
+    background-color: #0000002a;
+  }
+  .clip-right-slant {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 0% 100%);
+}
+
+.clip-left-slant {
+    clip-path: polygon(0% 30%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.text-glow1{
+    color: #e6bb5f;
+}
+
+
+.text-glow {
+    color: #e6bb5f;
+    text-shadow: 0 0 2px #e6bb5f, 0 0 3px #cfa14a, 0 0 4px #b78c38;
+    animation: flicker 3s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { text-shadow: 0 0 3px #d8b874, 0 0 5px #cfa14a, 0 0 7px #fdc451; }
+    50% { text-shadow: 0 0 4px #e0c184, 0 0 6px #cfa14a, 0 0 8px #f7b646; }
+    100% { text-shadow: 0 0 3px #d8b874, 0 0 5px #cfa14a, 0 0 7px #f8bb41; }
+}
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  cursor: pointer;
+  /* You can keep your Tailwind-like classes here or override as needed */
+}
+
+/* Hide the search form by default */
+.search-form {
+  display: none;
+}
+
+/* When active, show the form */
+.search-form.active {
+  display: inline-block;
+}
+
+.search-input {
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}/*# sourceMappingURL=style.css.map */
+.contentNews{
+  background-image: url(../images/index/white-abstract-background_23-2148831511.jpg);
+}
+.icons2 i{
+  color:#00457b
+}
+
+#map {
+  width: 30vw !important; /* Default for tablets and laptops */
+}
+@media (max-width: 768px) { /* For mobile screens */
+  #map {
+    width: 85vw !important;
+    margin-left: auto;
+  }
+}
+.bgin{
+  background-image: url("../images/index/bg2.avif");
+  background-color: rgba(240, 241, 241, 0.95);
+  background-blend-mode: color;
+}

@@ -1,0 +1,47 @@
+<%- include('../partials/head2') %>
+
+    <body>
+        <%- include('../partials/nav') %>
+            <div class="bgin  w-full bg-white text-[#00457b]">
+                <div class="w-full lg:h-[100px] md:h-[70px] h-[85px]"></div>
+
+
+                <div
+                class="routes w-full px-6 md:px-20 lg:px-44 flex flex-wrap items-center gap-2 md:gap-4 bg-[#00457b] py-3 md:py-5">
+                    <a class="text-xs md:text-sm font-medium hover:text-[#f26e32] uppercase inline-block text-white"
+                        href="/">Home <i class="ri-arrow-right-s-line text-md"></i>
+                    </a>
+                    <a class="text-xs md:text-sm font-medium hover:text-[#f26e32] uppercase inline-block text-white"
+                        href="/rti/others">Others <i class="ri-arrow-right-s-line text-md"></i>
+                    </a>
+                    <a class="text-xs md:text-sm font-medium hover:text-[#f26e32] uppercase inline-block text-white"
+                        href="#">Right To Information (RTI)
+                    </a>
+                </div>
+                <!-- Main Content -->
+                <div class="border-4 border-[#00457b] md:m-10 m-8  text-black">
+                    <h2 class="text-lg md:text-2xl uppercase font-bold text-[#00457b] pl-2 pt-2">Other Information</h2>
+                    <div class="px-4 md:px-20 lg:px-40 mt-8 md:mt-16 mb-8 md:mb-10 lg:text-[1vw] md:text-[1.5vw] text-[2vw] text-center">
+                      <div class="flex justify-between pb-6">
+                      <a href="/rti/Immoveable"> 
+                        <h1 class="uppercase text-[#00457b] bg-white border-2 border-[#00457b] hover:bg-[#00457b] hover:text-white lg:px-6 px-2 py-2 rounded-md transition-all">immovable properties details</h1>
+                    </a>
+              <a href="/rti/AnualReport">
+                <h1 class="uppercase text-[#00457b] bg-white border-2 border-[#00457b] hover:bg-[#00457b] hover:text-white lg:px-6 px-2 py-2 rounded-md transition-all">annual report</h1>
+              </a>
+              <a href="/rti/AnnualAccount">
+                <h1 class="uppercase text-[#00457b] bg-white border-2 border-[#00457b] hover:bg-[#00457b] hover:text-white lg:px-6 px-2 py-2 rounded-md transition-all">annual accounts</h1>
+              </a>
+                   <a href="/rti/Min_Meeting">
+                    <h1 class="uppercase text-[#00457b] bg-white border-2 border-[#00457b] hover:bg-[#00457b] hover:text-white lg:px-6 px-2 py-2 rounded-md transition-all">minuties of meeting</h1>
+                   </a> 
+                           <a href="/rti/Rti_Reports">
+                            <h1 class="uppercase text-[#00457b] bg-white border-2 border-[#00457b] hover:bg-[#00457b] hover:text-white lg:px-6 px-2 py-2 rounded-md transition-all">rti report</h1>
+                           </a>
+                      </div>
+                    </div>
+                </div> 
+            </div>
+                <%- include('../partials/footer') %>
+    </body>
+    <%- include('../partials/tail2') %>
