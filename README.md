@@ -4,7 +4,7 @@ Steps to run on local :
 
 Clone to local :
 ```bash
-git clone https://github.com/Devendraxp/iiitnagpur.git
+git clone https://github.com/kakusingh120/IIITNagpur
 ```
 open folder
 ```bash
